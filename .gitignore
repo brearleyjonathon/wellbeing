@@ -1,0 +1,7 @@
+# The vault's own plugin settings, not part of what ships.
+data.json
+
+# Local scratch
+*.bak
+node_modules/
+.DS_Store

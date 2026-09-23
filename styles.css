@@ -1,0 +1,200 @@
+/* Wellbeing sidebar.
+ *
+ * Sized for a right-leaf pane of roughly 280-360px: the day history runs down
+ * the pane's long axis, three columns across, so nothing needs to scroll
+ * sideways. Colors come from Obsidian's theme variables except the score
+ * swatches, which carry their own red-to-green ramp from main.js and so set a
+ * dark ink explicitly to stay legible on it in either theme.
+ */
+
+.wellbeing-view {
+    padding: 10px 12px 16px;
+}
+
+/* --- logger ------------------------------------------------------------- */
+
+.wb-logger {
+    margin-bottom: 14px;
+}
+
+.wb-logger-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.wb-logger-title {
+    font-size: var(--font-ui-medium);
+    font-weight: 600;
+}
+
+.wb-logger-date {
+    font-size: var(--font-ui-smaller);
+    color: var(--text-faint);
+}
+
+.wb-empty {
+    font-size: var(--font-ui-smaller);
+    color: var(--text-muted);
+    line-height: 1.4;
+    padding: 6px 0;
+}
+
+.wb-scale-row {
+    margin-bottom: 8px;
+}
+
+.wb-scale-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: var(--font-ui-smaller);
+    color: var(--text-muted);
+    margin-bottom: 3px;
+}
+
+.wb-scale-value {
+    font-weight: 600;
+    color: var(--text-normal);
+}
+
+.wb-scale {
+    display: flex;
+    gap: 2px;
+}
+
+.wb-scale-btn {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 0;
+    height: 22px;
+    font-size: 11px;
+    line-height: 22px;
+    border-radius: 3px;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    color: var(--text-faint);
+    background: var(--background-modifier-border);
+}
+
+.wb-scale-btn:hover {
+    color: var(--text-normal);
+    filter: brightness(1.1);
+}
+
+.wb-scale-btn.is-filled {
+    color: #111;
+}
+
+.wb-scale-btn.is-current {
+    outline: 2px solid var(--text-normal);
+    outline-offset: -2px;
+    font-weight: 700;
+}
+
+/* --- history ------------------------------------------------------------ */
+
+.wb-history {
+    border-top: 1px solid var(--background-modifier-border);
+    padding-top: 8px;
+}
+
+.wb-row {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 1px 2px;
+    border-radius: 4px;
+}
+
+.wb-row-head {
+    color: var(--text-faint);
+    font-size: var(--font-ui-smaller);
+    margin-bottom: 2px;
+}
+
+.wb-day-label {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: var(--font-ui-smaller);
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wb-cell {
+    flex: 0 0 auto;
+    width: 34px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #111;
+}
+
+.wb-cell-head {
+    background: none;
+    color: var(--text-faint);
+    font-weight: 500;
+}
+
+.wb-cell-empty {
+    background: var(--background-modifier-border);
+    color: var(--text-faint);
+    font-weight: 400;
+}
+
+.wb-day-row {
+    cursor: pointer;
+}
+
+.wb-day-row:hover {
+    background: var(--background-modifier-hover);
+}
+
+.wb-day-row.is-today .wb-day-label {
+    color: var(--text-normal);
+    font-weight: 600;
+}
+
+.wb-day-row.is-selected {
+    background: var(--background-modifier-active-hover, var(--background-modifier-hover));
+    outline: 1px solid var(--background-modifier-border-hover);
+}
+
+.wb-day-row.is-missing .wb-day-label {
+    opacity: 0.45;
+}
+
+.wb-month-break {
+    font-size: var(--font-ui-smaller);
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 6px 0 2px;
+}
+
+/* --- averages ----------------------------------------------------------- */
+
+.wb-averages {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid var(--background-modifier-border);
+}
+
+.wb-averages-line {
+    font-size: var(--font-ui-smaller);
+    color: var(--text-normal);
+}
+
+.wb-averages-sub {
+    font-size: var(--font-ui-smaller);
+    color: var(--text-faint);
+    margin-top: 2px;
+}

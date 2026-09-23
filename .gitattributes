@@ -1,0 +1,4 @@
+# One line ending everywhere. Without this the whole file reads as changed
+# the moment it is checked out on another platform, and deploy.sh arrives
+# with CRLF that bash will not run.
+* text=auto eol=lf

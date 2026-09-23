@@ -1,0 +1,10 @@
+{
+  "id": "wellbeing",
+  "name": "Wellbeing",
+  "version": "1.0.0",
+  "minAppVersion": "1.5.0",
+  "description": "Log and review the mood, energy and focus scores in your daily-note frontmatter, from a sidebar panel instead of the note itself.",
+  "author": "Jonathon Brearley",
+  "authorUrl": "https://github.com/brearleyjonathon",
+  "isDesktopOnly": false
+}
