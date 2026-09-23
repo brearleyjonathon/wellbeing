@@ -1,0 +1,2 @@
+# wellbeing
+Obsidian wellbeing tracker
